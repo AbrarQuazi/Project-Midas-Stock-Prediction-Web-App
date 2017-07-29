@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<title> home </title>
+</head>
+<body style="background-color: #254b82;" >
+	<nav class="navbar navbar-default">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<a class="navbar-brand" href="#">Project Midas</a>
+    		</div>
+    	<ul class="nav navbar-nav navbar-right">
+      		<li class="active"><a href="#">Home</a></li>
+      		<li><a href="#linker">How it Works </a></li>
+
+    	</ul>
+ 		 </div>
+	</nav>
+	<div class="main" style="background-color: #254b82; padding-top: 0; padding-bottom: 50%; min-height: 550px;" >
+		<h1 style="color: #d1ae52; text-align: center; padding-top: 100px;"> Stock Prediction </h1>
+		<form method="POST" action="/search" style="text-align: center; padding-top: 30px;">
+			<div class="form-group input-group-lg" style="padding-left: 10%; padding-right: 10%;"> </div>
+				<h4 style="color: #d1ae52"> Insert Stock Symbol </h4>
+				<input type="text" name="company" size ="70" placeholder="EX: GOOG">
+			<input class="btn btn-primary" type="submit" value="submit" style="align-content: center;" >
+		</form>
+	</div>
+	<div style="background-color: white; padding-bottom: 40%;">
+		<h1 style="text-align: center; color:#d1ae52; "> <span id="linker"> How It Works </span></h1>
+		<p style="padding-left: 20%; padding-right: 20%; font-size: 120%; padding-top: 50px;"> Project Midas collects relevant tweets about the specified stock and runs a sentiment analysis to identify if public opinion on the company is postive or negative. It then makes a prediction for tomorrow's stock price by analyzing historical stock price data from the last 20 days and running them through the radial basis function (RBF) which is a type of support vector used in machine learning and neural nets. </p>
+	</div>>
+</body>
+</html>
